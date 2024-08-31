@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <h1>Multiplayer Quiz Game</h1>
+    <div id="game-setup">
+      <input type="text" id="gameCode" placeholder="Enter Game Code">
+      <button id="joinGame">Join Game</button>
+      <button id="createGame">Create Game</button>
+    </div>
+    <div id="question-container" style="display: none;">
+      <h2 id="question"></h2>
+      <div id="options">
+        <!-- Options will be dynamically generated here -->
+      </div>
+      <button id="nextQuestion" style="display: none;">Next Question</button>
+    </div>
+    <div id="score-container" style="display: none;">
+      <h2>Your Score: <span id="player-score">0</span></h2>
+      <button id="playAgain">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
